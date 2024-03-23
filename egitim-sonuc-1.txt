@@ -1,0 +1,142 @@
+### Deneme Eğitimi Sonuçları
+480 veri epoklama ile tüm kanallardan alınan veriler tek tek eğitime sokulduğunda aşağıdaki sonuçlar alınmıştır.
+
+0 Kanal
+Logistic Regression accuracy: 0.55
+SVM accuracy: 0.55
+K-Nearest Neighbors accuracy: 0.60
+Decision Tree accuracy: 0.70
+Random Forest accuracy: 0.75
+AdaBoost accuracy: 0.70
+Naive Bayes accuracy: 0.50
+En iyi performans gösteren algoritma: Random Forest with an accuracy of 0.75
+
+1 Kanal
+Logistic Regression accuracy: 0.50
+SVM accuracy: 0.40
+K-Nearest Neighbors accuracy: 0.40
+Decision Tree accuracy: 0.50
+Random Forest accuracy: 0.45
+AdaBoost accuracy: 0.60
+Naive Bayes accuracy: 0.50
+En iyi performans gösteren algoritma: AdaBoost with an accuracy of 0.60
+
+2 Kanal
+Logistic Regression accuracy: 0.60
+SVM accuracy: 0.50
+K-Nearest Neighbors accuracy: 0.75
+Decision Tree accuracy: 0.55
+Random Forest accuracy: 0.60
+AdaBoost accuracy: 0.50
+Naive Bayes accuracy: 0.45
+En iyi performans gösteren algoritma: K-Nearest Neighbors with an accuracy of 0.75
+
+3 Kanal
+Logistic Regression accuracy: 0.60
+SVM accuracy: 0.65
+K-Nearest Neighbors accuracy: 0.55
+Decision Tree accuracy: 0.50
+Random Forest accuracy: 0.70
+AdaBoost accuracy: 0.65
+Naive Bayes accuracy: 0.55
+En iyi performans gösteren algoritma: Random Forest with an accuracy of 0.70
+
+4 Kanal 
+Logistic Regression accuracy: 0.95
+SVM accuracy: 0.45
+K-Nearest Neighbors accuracy: 0.70
+Decision Tree accuracy: 0.95
+Random Forest accuracy: 0.95
+AdaBoost accuracy: 0.95
+Naive Bayes accuracy: 0.85
+En iyi performans gösteren algoritma: Logistic Regression with an accuracy of 0.95
+
+5 Kanal
+Logistic Regression accuracy: 0.65
+SVM accuracy: 0.55
+K-Nearest Neighbors accuracy: 0.50
+Decision Tree accuracy: 0.40
+Random Forest accuracy: 0.50
+AdaBoost accuracy: 0.55
+Naive Bayes accuracy: 0.70
+En iyi performans gösteren algoritma: Naive Bayes with an accuracy of 0.70
+
+6 Kanal
+Logistic Regression accuracy: 0.45
+SVM accuracy: 0.45
+K-Nearest Neighbors accuracy: 0.55
+Decision Tree accuracy: 0.90
+Random Forest accuracy: 0.90
+AdaBoost accuracy: 0.80
+Naive Bayes accuracy: 0.45
+En iyi performans gösteren algoritma: Decision Tree with an accuracy of 0.90
+
+7 Kanal
+Logistic Regression accuracy: 0.55
+SVM accuracy: 0.35
+K-Nearest Neighbors accuracy: 0.65
+Decision Tree accuracy: 0.80
+Random Forest accuracy: 0.70
+AdaBoost accuracy: 0.75
+Naive Bayes accuracy: 0.45
+En iyi performans gösteren algoritma: Decision Tree with an accuracy of 0.80
+
+8 Kanal
+Logistic Regression accuracy: 0.45
+SVM accuracy: 0.70
+K-Nearest Neighbors accuracy: 0.40
+Decision Tree accuracy: 0.85
+Random Forest accuracy: 0.80
+AdaBoost accuracy: 0.85
+Naive Bayes accuracy: 0.45
+En iyi performans gösteren algoritma: Decision Tree with an accuracy of 0.85
+
+9 Kanal
+Logistic Regression accuracy: 0.60
+SVM accuracy: 0.65
+K-Nearest Neighbors accuracy: 0.60
+Decision Tree accuracy: 0.65
+Random Forest accuracy: 0.55
+AdaBoost accuracy: 0.55
+Naive Bayes accuracy: 0.45
+En iyi performans gösteren algoritma: SVM with an accuracy of 0.65
+
+10 Kanal
+Logistic Regression accuracy: 0.70
+SVM accuracy: 0.60
+K-Nearest Neighbors accuracy: 0.45
+Decision Tree accuracy: 0.65
+Random Forest accuracy: 0.45
+AdaBoost accuracy: 0.60
+Naive Bayes accuracy: 0.75
+En iyi performans gösteren algoritma: Naive Bayes with an accuracy of 0.75
+
+11 Kanal
+Logistic Regression accuracy: 0.75
+SVM accuracy: 0.65
+K-Nearest Neighbors accuracy: 0.40
+Decision Tree accuracy: 0.50
+Random Forest accuracy: 0.60
+AdaBoost accuracy: 0.50
+Naive Bayes accuracy: 0.45
+En iyi performans gösteren algoritma: Logistic Regression with an accuracy of 0.75
+
+12 Kanal
+Logistic Regression accuracy: 0.60
+SVM accuracy: 0.50
+K-Nearest Neighbors accuracy: 0.55
+Decision Tree accuracy: 0.55
+Random Forest accuracy: 0.60
+AdaBoost accuracy: 0.50
+Naive Bayes accuracy: 0.60
+En iyi performans gösteren algoritma: Logistic Regression with an accuracy of 0.60
+
+13 Kanal
+Logistic Regression accuracy: 0.45
+SVM accuracy: 0.30
+K-Nearest Neighbors accuracy: 0.40
+Decision Tree accuracy: 0.40
+Random Forest accuracy: 0.50
+AdaBoost accuracy: 0.40
+Naive Bayes accuracy: 0.60
+En iyi performans gösteren algoritma: Naive Bayes with an accuracy of 0.60
