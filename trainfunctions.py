@@ -93,17 +93,23 @@ def filtrele(data):
         fpass = 40  --> Geçirme bandı frekansı (Hz)
         n = 4        --> Filtre derecesi
     """
-    fs = 256  # Örnekleme frekansı (Hz)
-    fpass = 90  # Geçirme bandı frekansı (Hz)
-    fstop = 100  # Duran frekans (Hz)
-    Rp = 1  # Geçiş bölgesi ripleme (dB)
-    Rs = 60  # Duruş bölgesi sönümleme (dB)
-    n, Wn = cheb2ord(fpass / (fs / 2), fstop / (fs / 2), Rp, Rs) #min order ve Wn değerinin tespiti
-                                                            # n= 4 de seçilebilir.
+    fs = 160  # Örnekleme frekansı (Hz)
+    #fpass = 90  # Geçirme bandı frekansı (Hz)
+    fstop = 45  # Duran frekans (Hz)
+    #Rp = 1  # Geçiş bölgesi ripleme (dB)
+    Rs = 80  # Duruş bölgesi sönümleme (dB)
+    #n, Wn = cheb2ord(fpass / (fs / 2), fstop / (fs / 2), Rp, Rs) #min order ve Wn değerinin tespiti
+    n=10                                                        # n= 4 de seçilebilir.
     # Chebyshev Type II alçak geçiren filtre tasarımı
-    b, a = cheby2(n, Rs,Wn, 'low')
+    b, a = cheby2(n, Rs,fstop/(fs/2), 'low')
 
+
+    #t = np.arange(0, 144, 1/fs)  # 1 saniyelik zaman aralığı
+
+
+    #eeg_data = eeg_data[:, 1] # 1. sütunu seçme (ilk 256 satır)
     eeg_data_filtered = filtfilt(b, a, data) # Filtreleme işlemi
+
     return eeg_data_filtered
 
 # Veriyi epoklama
