@@ -39,7 +39,7 @@ class EEGSaveThread(QThread):
             if self.kalan_sure > self.record_time:
                 savemat(f'{self.record_title}.mat', {'eeg_data': eeg_data})
                 break
-name = "omer"
+
 class UpdatePlotThread(QThread):
     def __init__(self, num_graphs, data_lines):
         super().__init__()

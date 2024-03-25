@@ -3,6 +3,7 @@ import pandas as pd
 from scipy.signal import cheby2, filtfilt,cheb2ord
 from scipy.stats import kurtosis, skew, iqr, gmean, hmean
 from scipy.linalg import svd
+from scipy.signal import ellip
 
 """
 Bu modül eğitim verilerini hazırlamak için kullanılır.
@@ -86,31 +87,26 @@ def createFeatures(data):
     features.append(np.mean(teager_energy))
     return np.array(features)
 
-def filtrele(data):
+
+def filtrele(data, fs: int = 160, fstop1: int = 7, fstop2: int = 30):
+
     """
     Bu fonksiyon, verilen data DataFrame'ini filtreler.
         fs = 256     --> Örnekleme frekansı (Hz)
         fpass = 40  --> Geçirme bandı frekansı (Hz)
         n = 4        --> Filtre derecesi
     """
-    fs = 160  # Örnekleme frekansı (Hz)
-    #fpass = 90  # Geçirme bandı frekansı (Hz)
-    fstop = 45  # Duran frekans (Hz)
-    #Rp = 1  # Geçiş bölgesi ripleme (dB)
-    Rs = 80  # Duruş bölgesi sönümleme (dB)
-    #n, Wn = cheb2ord(fpass / (fs / 2), fstop / (fs / 2), Rp, Rs) #min order ve Wn değerinin tespiti
-    n=10                                                        # n= 4 de seçilebilir.
-    # Chebyshev Type II alçak geçiren filtre tasarımı
-    b, a = cheby2(n, Rs,fstop/(fs/2), 'low')
 
-
-    #t = np.arange(0, 144, 1/fs)  # 1 saniyelik zaman aralığı
-
-
-    #eeg_data = eeg_data[:, 1] # 1. sütunu seçme (ilk 256 satır)
-    eeg_data_filtered = filtfilt(b, a, data) # Filtreleme işlemi
-
-    return eeg_data_filtered
+    apass = 0.1  # Passband gain (dB)
+    astop1 = 60  # Stopband gain 1 (dB)
+    astop2 = 80  # Stopband gain 2 (dB)
+    order = 10  # Filter order
+    # Filter design
+    b, a = ellip(order, apass, astop1, [fstop1, fstop2], btype='bandpass', fs=fs)
+    # Filter the EEG data
+    filtered_data = filtfilt(b, a, data)
+    # Return filtered EEG data
+    return filtered_data
 
 # Veriyi epoklama
 def ornekle(data, sample):
