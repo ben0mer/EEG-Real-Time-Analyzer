@@ -15,7 +15,7 @@ class ModelAPI:
         # Make predictions using the loaded model
         if _probability:
             predictions = self.model.predict_proba(preprocessed_data)
-            print(predictions)
+            #print(predictions)
             # Apply thresholding if needed
             predictions = self.threshold(predictions, _threshold)
                 
@@ -26,9 +26,9 @@ class ModelAPI:
             #sadece 0. sütunu al
             predictions = predictions[:,0]
 
-        # Postprocess the predictions if needed
-        postprocessed_predictions = self.postprocess(predictions)
         
+        postprocessed_predictions = self.postprocess(predictions)
+        # Dönen veri iki elemanlı bir dizi, ilk elemanı TAHMİN ikinci elemanı TAHMİN OLASILIĞI
         return postprocessed_predictions
     
     def preprocess(self, input_data):

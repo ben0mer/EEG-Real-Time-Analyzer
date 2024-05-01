@@ -9,18 +9,26 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1185</width>
-    <height>921</height>
+    <width>1287</width>
+    <height>943</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>EEG Analyzer</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QMainWindow{
 	background-color:qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(5, 0, 35, 255), stop:1 rgba(24, 24, 24, 255));
 	font: 63 8pt &quot;Bahnschrift SemiBold&quot;;
-}</string>
+}
+* {
+    font-family: &quot;Bahnschrift SemiBold&quot;;
+}
+
+</string>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="sideBar" native="true">
@@ -29,7 +37,7 @@
       <x>0</x>
       <y>0</y>
       <width>200</width>
-      <height>921</height>
+      <height>953</height>
      </rect>
     </property>
     <property name="minimumSize">
@@ -63,64 +71,145 @@ QPushButton:checked{
 	background-color: #3daee9;
 }</string>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <property name="rightMargin">
-      <number>0</number>
-     </property>
-     <item>
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>EEG Analyzer</string>
-       </property>
-      </widget>
+    <layout class="QGridLayout" name="gridLayout_4">
+     <item row="2" column="0" rowspan="2" colspan="2">
+      <layout class="QHBoxLayout" name="horizontalLayout_11">
+       <item>
+        <widget class="QLabel" name="label_13">
+         <property name="minimumSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 10pt; /* Yazı tipi boyutunu ayarla */
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>resources/user.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_10">
+         <property name="styleSheet">
+          <string notr="true">font-size: 10pt; /* Yazı tipi boyutunu ayarla */
+</string>
+         </property>
+         <property name="text">
+          <string>Ali Semih Zengin</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="styleSheet">
-        <string notr="true">font-size: 8pt; /* Yazı tipi boyutunu ayarla */
-font-style: italic; /* Yazı tipi kalınlığını ayarla */</string>
-       </property>
-       <property name="text">
-        <string>Gerçek Zamanlı EEG Analizi v0.1</string>
-       </property>
-      </widget>
+     <item row="0" column="0" colspan="2">
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>resources/eeglogo3.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>EEG Analyzer</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
-     <item>
-      <widget class="QLabel" name="label_9">
-       <property name="styleSheet">
-        <string notr="true">font-size: 7pt; /* Yazı tipi boyutunu ayarla */
-font-style: italic; /* Yazı tipi kalınlığını ayarla */</string>
-       </property>
-       <property name="text">
-        <string>Ömer Gökyer</string>
-       </property>
-      </widget>
+     <item row="1" column="0" colspan="2">
+      <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <item>
+        <widget class="QLabel" name="label_12">
+         <property name="minimumSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 10pt; /* Yazı tipi boyutunu ayarla */
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>resources/user.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_9">
+         <property name="styleSheet">
+          <string notr="true">font-size: 10pt; /* Yazı tipi boyutunu ayarla */
+</string>
+         </property>
+         <property name="text">
+          <string>Ömer Gökyer</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
-     <item>
-      <widget class="QLabel" name="label_10">
-       <property name="styleSheet">
-        <string notr="true">font-size: 7pt; /* Yazı tipi boyutunu ayarla */
-font-style: italic; /* Yazı tipi kalınlığını ayarla */</string>
-       </property>
-       <property name="text">
-        <string>Ali Semih Zengin</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <spacer name="verticalSpacer_2">
+     <item row="9" column="1">
+      <spacer name="verticalSpacer">
        <property name="orientation">
         <enum>Qt::Vertical</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
          <width>20</width>
-         <height>78</height>
+         <height>443</height>
         </size>
        </property>
       </spacer>
      </item>
-     <item>
+     <item row="5" column="0" colspan="2">
       <widget class="QPushButton" name="eegVeri_sideBarButton">
        <property name="text">
         <string>EEG VERI IZLEME</string>
@@ -136,33 +225,7 @@ font-style: italic; /* Yazı tipi kalınlığını ayarla */</string>
        </property>
       </widget>
      </item>
-     <item>
-      <widget class="QPushButton" name="eegKayit_sideBarButton">
-       <property name="text">
-        <string>EEG KAYIT ALMA</string>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-       <property name="autoExclusive">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="modelTest_sideBarButton">
-       <property name="text">
-        <string>MODEL TEST</string>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-       <property name="autoExclusive">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item>
+     <item row="8" column="0" colspan="2">
       <widget class="QPushButton" name="robotKol_sideBarButton">
        <property name="text">
         <string>ROBOT KOL HAREKET</string>
@@ -175,21 +238,47 @@ font-style: italic; /* Yazı tipi kalınlığını ayarla */</string>
        </property>
       </widget>
      </item>
-     <item>
-      <spacer name="verticalSpacer">
+     <item row="4" column="0">
+      <spacer name="verticalSpacer_2">
        <property name="orientation">
         <enum>Qt::Vertical</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
          <width>20</width>
-         <height>443</height>
+         <height>78</height>
         </size>
        </property>
       </spacer>
      </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_5">
+     <item row="6" column="0" colspan="2">
+      <widget class="QPushButton" name="eegKayit_sideBarButton">
+       <property name="text">
+        <string>EEG KAYIT ALMA</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0" colspan="2">
+      <widget class="QPushButton" name="modelTest_sideBarButton">
+       <property name="text">
+        <string>MODEL TEST</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="0" colspan="2">
+      <widget class="QPushButton" name="cikisButton">
        <property name="text">
         <string>CIKIS</string>
        </property>
@@ -208,14 +297,14 @@ font-style: italic; /* Yazı tipi kalınlığını ayarla */</string>
      <rect>
       <x>200</x>
       <y>0</y>
-      <width>988</width>
-      <height>75</height>
+      <width>1091</width>
+      <height>65</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
       <width>0</width>
-      <height>75</height>
+      <height>60</height>
      </size>
     </property>
     <property name="styleSheet">
@@ -286,7 +375,7 @@ font-weight:bold;</string>
       </spacer>
      </item>
      <item>
-      <widget class="QLabel" name="label_4">
+      <widget class="QLabel" name="cihazDurum">
        <property name="styleSheet">
         <string notr="true">font-size:12pt;</string>
        </property>
@@ -340,9 +429,9 @@ font-weight:bold;</string>
     <property name="geometry">
      <rect>
       <x>200</x>
-      <y>75</y>
-      <width>988</width>
-      <height>902</height>
+      <y>65</y>
+      <width>1091</width>
+      <height>914</height>
      </rect>
     </property>
     <property name="minimumSize">
@@ -363,6 +452,9 @@ QWidget {
     color: #cccccc;
     background-color: #2d2d2d;
 }
+* {
+    font-family: &quot;Bahnschrift SemiBold&quot;;
+}
 
 /* Butonlar için stil */
 QPushButton {
@@ -382,11 +474,17 @@ QPushButton:hover {
      <number>0</number>
     </property>
     <widget class="QWidget" name="eegveri">
-     <layout class="QGridLayout" name="gridLayout_4">
-      <item row="0" column="1" rowspan="3" colspan="3">
-       <widget class="QGroupBox" name="groupBox">
-        <property name="styleSheet">
-         <string notr="true">QGroupBox {
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>1046</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox {
     border: none; /* Kenarlık yok */
     margin-top: 0px; /* Üstte boşluk yok */
     background-color: #242424; /* Koyu siyah arka plan */
@@ -471,273 +569,132 @@ QComboBox QAbstractItemView {
 
 
 </string>
-        </property>
-        <property name="title">
-         <string>EEG VERI IZLEME</string>
-        </property>
-        <layout class="QGridLayout" name="gridLayout">
-         <item row="0" column="1">
-          <spacer name="verticalSpacer_5">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>17</width>
-             <height>15</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="0" column="3">
-          <spacer name="verticalSpacer_8">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>17</width>
-             <height>18</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="0" column="5">
-          <spacer name="verticalSpacer_9">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>17</width>
-             <height>18</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="1" column="0">
-          <spacer name="horizontalSpacer">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>77</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="1" column="1">
-          <layout class="QFormLayout" name="formLayout">
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_11">
-             <property name="text">
-              <string>EEG VERI IZLEME</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QComboBox" name="comboBox"/>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="label_12">
-             <property name="text">
-              <string>EEG VERI IZLEME</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QComboBox" name="comboBox_2">
-             <property name="minimumSize">
-              <size>
-               <width>101</width>
-               <height>0</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="label_13">
-             <property name="text">
-              <string>EEG VERI IZLEME</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QComboBox" name="comboBox_3"/>
-           </item>
-          </layout>
-         </item>
-         <item row="1" column="2">
-          <spacer name="horizontalSpacer_6">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>76</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="1" column="3">
-          <layout class="QFormLayout" name="formLayout_2">
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_14">
-             <property name="text">
-              <string>Filtre Ayar</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QLineEdit" name="lineEdit">
-             <property name="enabled">
-              <bool>true</bool>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>140</width>
-               <height>20</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="label_15">
-             <property name="text">
-              <string>Filtre Ayar</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QLineEdit" name="lineEdit_2"/>
-           </item>
-           <item row="2" column="0">
-            <widget class="QCheckBox" name="checkBox_2">
-             <property name="text">
-              <string>CheckBox</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QCheckBox" name="checkBox">
-             <property name="text">
-              <string>CheckBox</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item row="1" column="4">
-          <spacer name="horizontalSpacer_7">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>76</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="1" column="5">
-          <layout class="QVBoxLayout" name="verticalLayout_2">
-           <item>
-            <widget class="QPushButton" name="eegVeriAkisiButton">
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>40</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>BAŞLAT</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_8">
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>40</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>Filtre</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item row="1" column="6">
-          <spacer name="horizontalSpacer_8">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>77</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="2" column="1">
-          <spacer name="verticalSpacer_6">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>17</width>
-             <height>18</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="2" column="3">
-          <spacer name="verticalSpacer_7">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>17</width>
-             <height>18</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="2" column="5">
-          <spacer name="verticalSpacer_10">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>17</width>
-             <height>18</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item row="3" column="1" colspan="4">
-       <widget class="QScrollArea" name="eegGrafik">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>650</height>
-         </size>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">/* ScrollArea için genel stil */
+      </property>
+      <property name="title">
+       <string>EEG VERI IZLEME</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="1">
+        <widget class="QLabel" name="label_11">
+         <property name="text">
+          <string>Zaman Aralığı</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QComboBox" name="comboBox"/>
+       </item>
+       <item row="0" column="4">
+        <widget class="QCheckBox" name="checkBox_2">
+         <property name="text">
+          <string>FİLTRE 1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>77</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="3">
+        <spacer name="horizontalSpacer_6">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>76</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="5">
+        <widget class="QCheckBox" name="checkBox">
+         <property name="text">
+          <string>FİLTRE 2</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="6">
+        <spacer name="horizontalSpacer_8">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>113</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="7">
+        <widget class="QPushButton" name="pushButton_8">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>UYGULA</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="8">
+        <widget class="QPushButton" name="eegVeriAkisiButton">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>BAŞLAT</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="9">
+        <spacer name="horizontalSpacer_7">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>112</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QScrollArea" name="eegGrafik">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>110</y>
+        <width>1046</width>
+        <height>751</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>650</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* ScrollArea için genel stil */
 QScrollArea {
     border: none;
     background-color: #333; /* Koyu arka plan rengi */
@@ -794,96 +751,35 @@ QScrollArea &gt; QScrollBar:horizontal &gt; QScrollBar::sub-line {
     width: 0;
 }
 </string>
-        </property>
-        <property name="widgetResizable">
-         <bool>true</bool>
-        </property>
-        <widget class="QWidget" name="scrollAreaWidgetContents">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>0</y>
-           <width>916</width>
-           <height>650</height>
-          </rect>
-         </property>
-        </widget>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <spacer name="horizontalSpacer_17">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>18</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="3" column="5">
-       <spacer name="horizontalSpacer_19">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>18</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="0" column="4" colspan="2">
-       <spacer name="horizontalSpacer_18">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>24</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="3" column="0">
-       <spacer name="horizontalSpacer_16">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>18</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="4" column="2">
-       <spacer name="verticalSpacer_17">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>65</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-     </layout>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1046</width>
+         <height>751</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
     </widget>
     <widget class="QWidget" name="eegkayit">
+     <property name="styleSheet">
+      <string notr="true">* {
+    font-family: &quot;Bahnschrift SemiBold&quot;;
+}
+</string>
+     </property>
      <widget class="QGroupBox" name="groupBox_2">
       <property name="geometry">
        <rect>
         <x>20</x>
         <y>20</y>
-        <width>953</width>
+        <width>1046</width>
         <height>171</height>
        </rect>
       </property>
@@ -1020,7 +916,7 @@ QComboBox QAbstractItemView {
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QLineEdit" name="lineEdit_4">
+          <widget class="QLineEdit" name="kayitBaslikLine">
            <property name="enabled">
             <bool>true</bool>
            </property>
@@ -1040,7 +936,7 @@ QComboBox QAbstractItemView {
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QLineEdit" name="lineEdit_3"/>
+          <widget class="QLineEdit" name="kayitSureLine"/>
          </item>
          <item row="2" column="0">
           <widget class="QLabel" name="label_18">
@@ -1050,23 +946,29 @@ QComboBox QAbstractItemView {
           </widget>
          </item>
          <item row="2" column="1">
-          <widget class="QLabel" name="label_20">
+          <widget class="QLabel" name="kayitDurumLabel">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(85, 255, 0);</string>
+           </property>
            <property name="text">
-            <string>DURUM_value</string>
+            <string>Kayıt Hazır</string>
            </property>
           </widget>
          </item>
          <item row="3" column="0">
           <widget class="QLabel" name="label_19">
            <property name="text">
-            <string>KALAN SÜRE:</string>
+            <string>GEÇEN SÜRE</string>
            </property>
           </widget>
          </item>
          <item row="3" column="1">
-          <widget class="QLabel" name="label_21">
+          <widget class="QLabel" name="kayitKalanSureLabel">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 255, 0);</string>
+           </property>
            <property name="text">
-            <string>KALANSURE_value</string>
+            <string>0</string>
            </property>
           </widget>
          </item>
@@ -1147,6 +1049,19 @@ QComboBox QAbstractItemView {
          </property>
         </spacer>
        </item>
+       <item row="3" column="1">
+        <spacer name="verticalSpacer_17">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>17</width>
+           <height>18</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
       </layout>
      </widget>
     </widget>
@@ -1156,8 +1071,8 @@ QComboBox QAbstractItemView {
        <rect>
         <x>20</x>
         <y>20</y>
-        <width>953</width>
-        <height>238</height>
+        <width>1046</width>
+        <height>261</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1199,6 +1114,9 @@ QPushButton:pressed {
 }
 QPushButton:pressed#kayitDurdur {
 	background-color: rgb(255, 182, 85)
+}
+* {
+    font-family: &quot;Bahnschrift SemiBold&quot;;
 }
 
 
@@ -1254,270 +1172,584 @@ QFormLayout{
        <string>GroupBox</string>
       </property>
       <layout class="QGridLayout" name="gridLayout_3">
-       <item row="0" column="1">
-        <spacer name="verticalSpacer_14">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>17</width>
-           <height>19</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="0" column="3" rowspan="2">
-        <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item row="1" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
          <item>
-          <spacer name="verticalSpacer_16">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>17</width>
-             <height>18</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="checkBox_4">
-           <property name="styleSheet">
-            <string notr="true">font-size:12pt;</string>
-           </property>
-           <property name="text">
-            <string>STANDART MOD</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="checkBox_3">
-           <property name="styleSheet">
-            <string notr="true">font-size:12pt;</string>
-           </property>
-           <property name="text">
-            <string>BASILI TUTMA MODU</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pushButton_10">
-           <property name="minimumSize">
-            <size>
-             <width>100</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>MODELİ BAŞLAT</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pushButton_9">
-           <property name="minimumSize">
-            <size>
-             <width>100</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>MODELİ DURDUR</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="0" column="5" rowspan="2">
-        <layout class="QVBoxLayout" name="verticalLayout_6">
-         <item>
-          <spacer name="verticalSpacer_15">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>17</width>
-             <height>18</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_33">
-           <property name="styleSheet">
-            <string notr="true">font-size:12pt;
-font-weight:bold;</string>
-           </property>
-           <property name="text">
-            <string>ÖNCEKİ SONUÇ</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QFormLayout" name="formLayout_5">
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_27">
-             <property name="text">
-              <string>Tahmin</string>
-             </property>
-            </widget>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <item>
+            <layout class="QFormLayout" name="formLayout_4">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_22">
+               <property name="text">
+                <string>Model Dosya Yolu</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="modelPath">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>140</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>exported_models//RandomForestClassifier()-7-O2-BETA1.pkl</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_23">
+               <property name="text">
+                <string>Modelin Örnekleme Sayısı</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="modelFrequency">
+               <property name="text">
+                <string>160</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_24">
+               <property name="text">
+                <string>Modelin Filtresi</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLineEdit" name="modelFilter">
+               <property name="text">
+                <string>False</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="label_25">
+               <property name="text">
+                <string>Analiz Edilecek Kanal</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QLineEdit" name="modelChannel">
+               <property name="text">
+                <string>7</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="label_26">
+               <property name="text">
+                <string>Tahmin Eşik Değeri </string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QLineEdit" name="modelThreshold">
+               <property name="text">
+                <string>-1</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </item>
-           <item row="0" column="1">
-            <widget class="QLabel" name="label_30">
-             <property name="text">
-              <string>Tahmin_Value</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="label_28">
-             <property name="text">
-              <string>Tahmin Yüzdesi</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QLabel" name="label_31">
-             <property name="text">
-              <string>TahminYuzde_value</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="label_29">
-             <property name="text">
-              <string>Sonuç</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QLabel" name="label_32">
-             <property name="text">
-              <string>Sonuç_Value</string>
-             </property>
-            </widget>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QPushButton" name="modelBaslat">
+               <property name="minimumSize">
+                <size>
+                 <width>100</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>MODELİ BAŞLAT</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="modelDurdur">
+               <property name="minimumSize">
+                <size>
+                 <width>100</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>MODELİ DURDUR</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </item>
           </layout>
          </item>
          <item>
-          <widget class="QLabel" name="label_36">
-           <property name="styleSheet">
-            <string notr="true">font-size:12pt;
-font-weight:bold;</string>
+          <spacer name="horizontalSpacer_13">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
            </property>
-           <property name="text">
-            <string>YENİ SONUÇ</string>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
            </property>
-          </widget>
+          </spacer>
          </item>
          <item>
-          <layout class="QFormLayout" name="formLayout_6">
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_39">
+          <spacer name="horizontalSpacer_15">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <spacer name="verticalSpacer_15">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>17</width>
+               <height>18</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_33">
+             <property name="styleSheet">
+              <string notr="true">font-size:12pt;
+font-weight:bold;</string>
+             </property>
              <property name="text">
-              <string>Tahmin</string>
+              <string>ÖNCEKİ SONUÇ</string>
              </property>
             </widget>
            </item>
-           <item row="0" column="1">
-            <widget class="QLabel" name="label_38">
+           <item>
+            <layout class="QFormLayout" name="formLayout_5">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_27">
+               <property name="text">
+                <string>Tahmin</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="prevTahminLabel">
+               <property name="text">
+                <string>Tahmin_Value</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_28">
+               <property name="text">
+                <string>Tahmin Yüzdesi</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLabel" name="prevTahminYuzdeLabel">
+               <property name="text">
+                <string>TahminYuzde_value</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_29">
+               <property name="text">
+                <string>Sonuç</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLabel" name="prevTahminSonucLabel">
+               <property name="text">
+                <string>Sonuç_Value</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_16">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>17</width>
+               <height>18</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_36">
+             <property name="styleSheet">
+              <string notr="true">font-size:12pt;
+font-weight:bold;</string>
+             </property>
              <property name="text">
-              <string>Tahmin_Value</string>
+              <string>YENİ SONUÇ</string>
              </property>
             </widget>
            </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="label_40">
-             <property name="text">
-              <string>Tahmin Yüzdesi</string>
-             </property>
-            </widget>
+           <item>
+            <layout class="QFormLayout" name="formLayout_6">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_39">
+               <property name="text">
+                <string>Tahmin</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="tahminLabel">
+               <property name="text">
+                <string>Tahmin_Value</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_40">
+               <property name="text">
+                <string>Tahmin Yüzdesi</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLabel" name="tahminYuzdeLabel">
+               <property name="text">
+                <string>TahminYuzde_value</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_35">
+               <property name="text">
+                <string>Sonuç</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLabel" name="tahminSonucLabel">
+               <property name="text">
+                <string>Sonuç_Value</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <spacer name="verticalSpacer_18">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>106</width>
+                 <height>15</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
            </item>
-           <item row="1" column="1">
-            <widget class="QLabel" name="label_37">
-             <property name="text">
-              <string>TahminYuzde_value</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="label_35">
-             <property name="text">
-              <string>Sonuç</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
+          </layout>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_14">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
             <widget class="QLabel" name="label_34">
+             <property name="styleSheet">
+              <string notr="true">font-size:12pt;
+font-weight:bold;</string>
+             </property>
              <property name="text">
-              <string>Sonuç_Value</string>
+              <string>KONTROL PANELİ</string>
              </property>
             </widget>
            </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_8">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_4">
+                 <item>
+                  <widget class="QLabel" name="label_43">
+                   <property name="styleSheet">
+                    <string notr="true">font-weight:bold;</string>
+                   </property>
+                   <property name="text">
+                    <string>Veri Sayısı</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="modelVeriSayisi">
+                   <property name="text">
+                    <string>10</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_5">
+                 <item>
+                  <widget class="QLabel" name="label_41">
+                   <property name="styleSheet">
+                    <string notr="true">font-weight:bold;</string>
+                   </property>
+                   <property name="text">
+                    <string>Kaydedilen Veri Sayisi</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="modelVeriSayisiLabel">
+                   <property name="text">
+                    <string>VeriSayısı_Value</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="modelVeriKaydet">
+                   <property name="minimumSize">
+                    <size>
+                     <width>100</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>180</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Veri Kaydet</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QFormLayout" name="formLayout_7">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_44">
+                 <property name="styleSheet">
+                  <string notr="true">font-weight:bold;</string>
+                 </property>
+                 <property name="text">
+                  <string>Adım Sayısı</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLineEdit" name="modelAdimSayisi">
+                 <property name="text">
+                  <string>5</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_45">
+                 <property name="styleSheet">
+                  <string notr="true">font-weight:bold;</string>
+                 </property>
+                 <property name="text">
+                  <string>Sağ Hedef Mesajı</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLineEdit" name="modelSagMesaj">
+                 <property name="text">
+                  <string>&lt;SAG&gt;</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_46">
+                 <property name="styleSheet">
+                  <string notr="true">font-weight:bold;</string>
+                 </property>
+                 <property name="text">
+                  <string>Sol Hedef Mesajı</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QLineEdit" name="modelSolMesaj">
+                 <property name="text">
+                  <string>&lt;SOL&gt;</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_13">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <item>
+                <widget class="QPushButton" name="modelSolBtn">
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+    background-color: rgb(255, 85, 0);
+}
+
+QPushButton:hover {
+    background-color: rgb(255, 105, 25);
+}
+
+QPushButton:pressed {
+    background-color: rgb(225, 75, 0);
+}
+</string>
+                 </property>
+                 <property name="text">
+                  <string>SOL</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="modelSagBtn">
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+    background-color: rgb(255, 85, 0);
+}
+
+QPushButton:hover {
+    background-color: rgb(255, 105, 25);
+}
+
+QPushButton:pressed {
+    background-color: rgb(225, 75, 0);
+}
+</string>
+                 </property>
+                 <property name="text">
+                  <string>SAĞ</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="modelAyarlaButon">
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Ayarla</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="modelKonumSifirla">
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Konumu Sıfırla</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <item>
+              <widget class="QCheckBox" name="modelTopHareket">
+               <property name="styleSheet">
+                <string notr="true">font-size:12pt;</string>
+               </property>
+               <property name="text">
+                <string>Topu Hareket Ettir</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="modelRobotSinyal">
+               <property name="styleSheet">
+                <string notr="true">font-size:12pt;</string>
+               </property>
+               <property name="text">
+                <string>Robot Kola Sinyal Gönder</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
           </layout>
-         </item>
-        </layout>
-       </item>
-       <item row="0" column="7" rowspan="2">
-        <layout class="QVBoxLayout" name="verticalLayout_5">
-         <item>
-          <spacer name="verticalSpacer_4">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_41">
-           <property name="styleSheet">
-            <string notr="true">font-weight:bold;</string>
-           </property>
-           <property name="text">
-            <string>Alınan Veri Sayısı</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_42">
-           <property name="text">
-            <string>VeriSayısı_Value</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pushButton_11">
-           <property name="minimumSize">
-            <size>
-             <width>100</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>Veri Kaydet</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_3">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
          </item>
         </layout>
        </item>
@@ -1528,75 +1760,11 @@ font-weight:bold;</string>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>22</width>
+           <width>40</width>
            <height>20</height>
           </size>
          </property>
         </spacer>
-       </item>
-       <item row="1" column="1">
-        <layout class="QFormLayout" name="formLayout_4">
-         <item row="0" column="0">
-          <widget class="QLabel" name="label_22">
-           <property name="text">
-            <string>Model Dosya Yolu</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLineEdit" name="lineEdit_6">
-           <property name="enabled">
-            <bool>true</bool>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>140</width>
-             <height>20</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="label_23">
-           <property name="text">
-            <string>Modelin Örnekleme Sayısı</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QLineEdit" name="lineEdit_5"/>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="label_24">
-           <property name="text">
-            <string>Modelin Filtresi</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1">
-          <widget class="QLineEdit" name="lineEdit_7"/>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="label_25">
-           <property name="text">
-            <string>Analiz Edilecek Kanal</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="1">
-          <widget class="QLineEdit" name="lineEdit_8"/>
-         </item>
-         <item row="4" column="0">
-          <widget class="QLabel" name="label_26">
-           <property name="text">
-            <string>Tahmin Eşik Değeri </string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="1">
-          <widget class="QLineEdit" name="lineEdit_9"/>
-         </item>
-        </layout>
        </item>
        <item row="1" column="2">
         <spacer name="horizontalSpacer_12">
@@ -1605,79 +1773,141 @@ font-weight:bold;</string>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>22</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="1" column="4">
-        <spacer name="horizontalSpacer_13">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>21</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="1" column="6">
-        <spacer name="horizontalSpacer_14">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>13</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="1" column="8">
-        <spacer name="horizontalSpacer_15">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>22</width>
+           <width>40</width>
            <height>20</height>
           </size>
          </property>
         </spacer>
        </item>
        <item row="2" column="1">
-        <spacer name="verticalSpacer_13">
+        <spacer name="verticalSpacer_4">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>17</width>
-           <height>18</height>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="1">
+        <spacer name="verticalSpacer_14">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
           </size>
          </property>
         </spacer>
        </item>
       </layout>
      </widget>
+     <widget class="QScrollArea" name="modelOyun">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>309</y>
+        <width>1041</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>500</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* ScrollArea için genel stil */
+QScrollArea {
+    border: none;
+    background-color: #333; /* Koyu arka plan rengi */
+}
+
+/* ScrollArea içindeki viewport için stil */
+QScrollArea &gt; QWidget &gt; QWidget {
+    background-color: #333; /* Koyu arka plan rengi */
+}
+
+/* Dikey kaydırma çubuğu için stil */
+QScrollArea &gt; QScrollBar:vertical {
+    border: none;
+    background-color: #555; /* Kaydırma çubuğu arka plan rengi */
+    width: 10px; /* Kaydırma çubuğu genişliği */
+    margin: 10px 0 10px 0;
+}
+
+/* Dikey kaydırma çubuğu tutamağı için stil */
+QScrollArea &gt; QScrollBar:vertical &gt; QScrollBar::handle {
+    background-color: #888; /* Tutamaç rengi */
+    min-height: 20px; /* Tutamaç minimum yüksekliği */
+    border-radius: 5px; /* Tutamaç köşe yuvarlaklığı */
+}
+
+/* Dikey kaydırma çubuğu için butonlar (yukarı/aşağı) */
+QScrollArea &gt; QScrollBar:vertical &gt; QScrollBar::add-line,
+QScrollArea &gt; QScrollBar:vertical &gt; QScrollBar::sub-line {
+    background: none;
+    border: none;
+    height: 0;
+}
+
+/* Yatay kaydırma çubuğu için stil */
+QScrollArea &gt; QScrollBar:horizontal {
+    border: none;
+    background-color: #555; /* Kaydırma çubuğu arka plan rengi */
+    height: 10px; /* Kaydırma çubuğu yüksekliği */
+    margin: 0 10px 0 10px;
+}
+
+/* Yatay kaydırma çubuğu tutamağı için stil */
+QScrollArea &gt; QScrollBar:horizontal &gt; QScrollBar::handle {
+    background-color: #888; /* Tutamaç rengi */
+    min-width: 20px; /* Tutamaç minimum genişliği */
+    border-radius: 5px; /* Tutamaç köşe yuvarlaklığı */
+}
+
+/* Yatay kaydırma çubuğu için butonlar (sol/sağ) */
+QScrollArea &gt; QScrollBar:horizontal &gt; QScrollBar::add-line,
+QScrollArea &gt; QScrollBar:horizontal &gt; QScrollBar::sub-line {
+    background: none;
+    border: none;
+    width: 0;
+}
+</string>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1041</width>
+         <height>541</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
     </widget>
     <widget class="QWidget" name="robotkol">
      <widget class="QLabel" name="label_6">
       <property name="geometry">
        <rect>
-        <x>420</x>
-        <y>180</y>
-        <width>47</width>
+        <x>500</x>
+        <y>360</y>
+        <width>111</width>
         <height>23</height>
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>YAKINDA EKLENECEK</string>
       </property>
      </widget>
     </widget>

@@ -33,13 +33,14 @@ class EEGAnalyzeThread(QThread):
                 yeni_veri = yeni_veri.iloc[:,7]
                 yeni_veri = pd.DataFrame(yeni_veri)
                 yeni_veri = tf.ornekle(yeni_veri, 160)
-                print(yeni_veri)
+                #print(yeni_veri)
                 self.make_prediction(yeni_veri)
                 eeg_data = []
     def make_prediction(self, yeni_veri):
         predictions = self.model_api.tahmin(yeni_veri,_probability=True)
         #prediction'ın 0. sütunundaki değer 1 ise kareyi sağa kaydır, 0 ise sola kaydır
         predictions = self.model_api.tahmin(yeni_veri,_probability=True)
+        print(predictions)
         if any(predictions[:, 0] == 1):
             self.moveRight.emit()
         else:
